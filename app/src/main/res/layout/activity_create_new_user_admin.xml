@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/definite_dimen_12"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_return"
+            android:layout_gravity="top"/>
+        <ImageView
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:background="@drawable/logo_1_5_x"
+            android:layout_gravity="center"/>
+
+
+    </Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_waves_of_food"
+        android:textSize="@dimen/text_size_xxhuge"
+        android:fontFamily="@font/yeonsung_regular"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create New User Admin "
+        android:fontFamily="@font/lato_black"
+        android:textColor="@color/green"
+        android:textSize="@dimen/text_size_xsmall"
+        android:layout_marginTop="@dimen/definite_dimen_10"
+        android:layout_marginBottom="@dimen/definite_dimen_24"
+        android:layout_gravity="center"/>
+
+
+    <EditText
+        android:id="@+id/name_ti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name of Owner "
+        android:layout_marginTop="@dimen/definite_dimen_20"
+        android:layout_marginLeft="@dimen/definite_dimen_18"
+        android:layout_marginRight="@dimen/definite_dimen_18"
+        android:background="@drawable/text_input"
+        android:paddingLeft="@dimen/definite_dimen_8"
+        android:paddingTop="@dimen/definite_dimen_12"
+        android:paddingBottom="@dimen/definite_dimen_12"
+        android:drawableLeft="@drawable/user_icon"
+        android:drawablePadding="@dimen/definite_dimen_12"
+        />
+
+    <EditText
+        android:id="@+id/name_res_ti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name of Restaurant "
+        android:layout_marginLeft="@dimen/definite_dimen_18"
+        android:layout_marginRight="@dimen/definite_dimen_18"
+        android:background="@drawable/text_input"
+        android:paddingLeft="@dimen/definite_dimen_8"
+        android:layout_marginTop="@dimen/definite_dimen_6"
+        android:paddingTop="@dimen/definite_dimen_12"
+        android:paddingBottom="@dimen/definite_dimen_12"
+        android:drawableLeft="@drawable/home_icon"
+        android:drawablePadding="@dimen/definite_dimen_12"
+        />
+
+    <EditText
+        android:id="@+id/email_ti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email or Phone Number"
+        android:layout_marginTop="@dimen/definite_dimen_6"
+        android:layout_marginLeft="@dimen/definite_dimen_18"
+        android:layout_marginRight="@dimen/definite_dimen_18"
+        android:background="@drawable/text_input"
+        android:paddingLeft="@dimen/definite_dimen_8"
+        android:paddingTop="@dimen/definite_dimen_12"
+        android:paddingBottom="@dimen/definite_dimen_12"
+        android:drawableLeft="@drawable/mail_icon"
+        android:drawablePadding="@dimen/definite_dimen_12"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pwd_ti"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+
+        android:hint="Password">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/definite_dimen_6"
+            android:layout_marginLeft="@dimen/definite_dimen_18"
+            android:layout_marginRight="@dimen/definite_dimen_18"
+            android:background="@drawable/text_input"
+            android:drawableStart="@drawable/lock_icon"
+            android:drawablePadding="@dimen/definite_dimen_14"
+
+            />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_login"
+        android:fontFamily="@font/yeonsung_regular"
+        android:textSize="@dimen/text_size_xnormal"
+        android:background="@drawable/rounded_green_button"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/definite_dimen_30"
+        android:paddingLeft="@dimen/definite_dimen_50"
+        android:paddingRight="@dimen/definite_dimen_50"
+        android:layout_gravity="center"/>
+
+
+</LinearLayout>

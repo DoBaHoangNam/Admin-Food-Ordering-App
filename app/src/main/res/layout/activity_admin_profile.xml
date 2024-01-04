@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.AdminProfileActivity">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_return"/>
+
+        <TextView
+            android:id="@+id/tv_cart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Admin Profile"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_size_huge"
+            android:fontFamily="@font/yeonsung_regular"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/definite_dimen_10"
+
+            />
+
+    </Toolbar>
+
+    <LinearLayout
+        android:id="@+id/lnFunction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/definite_dimen_6"
+        android:layout_marginBottom="@dimen/definite_dimen_6"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:text="Edit Your Profile "
+            android:fontFamily="@font/yeonsung_regular"
+            android:textColor="@color/green"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/definite_dimen_20"/>
+
+        <TextView
+            android:id="@+id/tcClickToEdit"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:text="Click Here To Edit"
+            android:drawableStart="@drawable/icon_edit"
+            android:layout_marginStart="@dimen/definite_dimen_100"
+            android:fontFamily="@font/yeonsung_regular"
+            android:textColor="@color/green"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:layout_marginEnd="@dimen/definite_dimen_20"
+            android:textAlignment="textEnd"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LLInfor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/lnFunction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_white_button"
+            android:layout_marginStart="@dimen/definite_dimen_20"
+            android:layout_marginEnd="@dimen/definite_dimen_20"
+            android:layout_marginTop="@dimen/definite_dimen_20"
+            android:weightSum="3"
+            android:padding="@dimen/definite_dimen_14">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:fontFamily="@font/yeonsung_regular"
+                android:textSize="@dimen/text_size_large"
+                android:layout_marginEnd="@dimen/definite_dimen_30"
+                android:layout_marginStart="@dimen/definite_dimen_10"
+                android:layout_weight="1"
+                />
+
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Do Ba Hoang Nam"
+                android:fontFamily="@font/yeonsung_regular"
+                android:layout_weight="2"
+                android:background="@drawable/profile_edit_text_shape"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_white_button"
+            android:layout_marginStart="@dimen/definite_dimen_20"
+            android:layout_marginEnd="@dimen/definite_dimen_20"
+            android:layout_marginTop="@dimen/definite_dimen_20"
+            android:weightSum="3"
+            android:padding="@dimen/definite_dimen_14">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:fontFamily="@font/yeonsung_regular"
+                android:textSize="@dimen/text_size_large"
+                android:layout_marginEnd="@dimen/definite_dimen_30"
+                android:layout_marginStart="@dimen/definite_dimen_10"
+                android:layout_weight="1"
+                />
+
+            <EditText
+                android:id="@+id/edtAdress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Kim Nguu, Hai Ba Trung, Ha Noi"
+                android:fontFamily="@font/yeonsung_regular"
+                android:layout_weight="2"
+                android:background="@drawable/profile_edit_text_shape"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_white_button"
+            android:layout_marginStart="@dimen/definite_dimen_20"
+            android:layout_marginEnd="@dimen/definite_dimen_20"
+            android:layout_marginTop="@dimen/definite_dimen_20"
+            android:weightSum="3"
+            android:padding="@dimen/definite_dimen_14">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:fontFamily="@font/yeonsung_regular"
+                android:textSize="@dimen/text_size_large"
+                android:layout_marginEnd="@dimen/definite_dimen_30"
+                android:layout_marginStart="@dimen/definite_dimen_10"
+                android:layout_weight="1"
+                />
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="nam.dbh198248@sis.hust.edu.vn"
+                android:fontFamily="@font/yeonsung_regular"
+                android:layout_weight="2"
+                android:background="@drawable/profile_edit_text_shape"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_white_button"
+            android:layout_marginStart="@dimen/definite_dimen_20"
+            android:layout_marginEnd="@dimen/definite_dimen_20"
+            android:layout_marginTop="@dimen/definite_dimen_20"
+            android:weightSum="3"
+            android:padding="@dimen/definite_dimen_14">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:fontFamily="@font/yeonsung_regular"
+                android:textSize="@dimen/text_size_large"
+                android:layout_marginEnd="@dimen/definite_dimen_30"
+                android:layout_marginStart="@dimen/definite_dimen_10"
+                android:layout_weight="1"
+                />
+
+            <EditText
+                android:id="@+id/edtPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="12345678"
+                android:layout_weight="2"
+                android:fontFamily="@font/yeonsung_regular"
+                android:background="@drawable/profile_edit_text_shape"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_white_button"
+            android:layout_marginStart="@dimen/definite_dimen_20"
+            android:layout_marginEnd="@dimen/definite_dimen_20"
+            android:layout_marginTop="@dimen/definite_dimen_20"
+            android:weightSum="3"
+            android:padding="@dimen/definite_dimen_14">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:fontFamily="@font/yeonsung_regular"
+                android:textSize="@dimen/text_size_large"
+                android:layout_marginEnd="@dimen/definite_dimen_30"
+                android:layout_marginStart="@dimen/definite_dimen_10"
+                android:layout_weight="1"
+                />
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="************"
+                android:layout_weight="2"
+                android:fontFamily="@font/yeonsung_regular"
+                android:background="@drawable/profile_edit_text_shape"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_white_button"
+        android:text="Save Information"
+        android:textColor="@color/green"
+        android:fontFamily="@font/yeonsung_regular"
+        android:textSize="@dimen/text_size_normal"
+        android:layout_marginStart="@dimen/definite_dimen_20"
+        android:layout_marginEnd="@dimen/definite_dimen_20"
+        android:layout_marginBottom="@dimen/definite_dimen_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

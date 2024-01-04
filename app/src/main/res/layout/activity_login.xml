@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:background="@drawable/logo_1_5_x"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_waves_of_food"
+        android:textSize="@dimen/text_size_xxhuge"
+        android:fontFamily="@font/yeonsung_regular" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login To Your Admin Dashboard"
+        android:fontFamily="@font/lato_black"
+        android:textColor="@color/green"
+        android:textSize="@dimen/text_size_xsmall"
+        android:layout_marginTop="@dimen/definite_dimen_10"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailTi"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:touchscreenBlocksFocus="false"
+        android:layout_marginTop="@dimen/definite_dimen_18"
+        android:hint="@string/hint_email_or_phone_number">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/definite_dimen_18"
+            android:layout_marginRight="@dimen/definite_dimen_18"
+            android:background="@drawable/text_input"
+            android:gravity="center" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pwd_ti"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        android:hint="@string/hint_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/definite_dimen_6"
+            android:layout_marginLeft="@dimen/definite_dimen_18"
+            android:layout_marginRight="@dimen/definite_dimen_18"
+            android:background="@drawable/text_input"
+            android:gravity="center"
+
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/yeonsung_regular"
+        android:text="@string/tv_or"
+        android:textColor="@color/green"
+        android:textSize="@dimen/text_size_small"
+        android:layout_marginTop="@dimen/definite_dimen_12"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_continue_with"
+        android:fontFamily="@font/yeonsung_regular"
+        android:textColor="@color/green"
+        android:textSize="@dimen/text_size_normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/definite_dimen_12">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fb_login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/definite_dimen_40"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_white_button"
+            android:drawableLeft="@drawable/logo_fb"
+            android:text="@string/tv_facebook"
+            android:paddingLeft="@dimen/definite_dimen_14"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/googleLoginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_white_button"
+            android:drawableLeft="@drawable/logo_google"
+            android:text="@string/tv_google"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/definite_dimen_40"
+            android:layout_marginRight="@dimen/definite_dimen_40"
+            android:paddingLeft="@dimen/definite_dimen_14"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_login"
+        android:fontFamily="@font/yeonsung_regular"
+        android:textSize="@dimen/text_size_xnormal"
+        android:background="@drawable/rounded_green_button"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/definite_dimen_12"
+        android:paddingLeft="@dimen/definite_dimen_50"
+        android:paddingRight="@dimen/definite_dimen_50"/>
+    <TextView
+        android:id="@+id/dont_have_acc_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_don_t_have_account"
+        android:textColor="@color/green"
+        android:fontFamily="@font/yeonsung_regular"
+        android:layout_marginTop="@dimen/definite_dimen_12"/>
+
+
+
+
+</LinearLayout>

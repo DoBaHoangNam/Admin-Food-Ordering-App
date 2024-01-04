@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.DashboardScreen">
+
+    <Toolbar
+        android:id="@+id/toolbar_headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/definite_dimen_38"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_small" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Welcome Admin"
+            android:textSize="@dimen/text_size_xxhuge"
+            android:layout_marginStart="@dimen/definite_dimen_20"
+            android:paddingLeft="@dimen/definite_dimen_30"
+            android:textAlignment="center"/>
+    </Toolbar>
+
+    <LinearLayout
+        android:id="@+id/status_ln"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_headline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/definite_dimen_38"
+        android:layout_marginStart="@dimen/definite_dimen_18"
+        android:layout_marginEnd="@dimen/definite_dimen_18"
+        android:padding="@dimen/definite_dimen_14"
+        android:weightSum="3"
+        android:background="@drawable/rounded_grey_button"
+        >
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:src="@drawable/icon_i"
+                android:layout_marginTop="@dimen/definite_dimen_6"
+                android:layout_marginBottom="@dimen/definite_dimen_6"
+                />
+            <TextView
+                android:id="@+id/tvPending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pending Order"
+                android:fontFamily="@font/yeonsung_regular"
+                android:textColor="@color/green"
+                android:gravity="center"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="30"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_huge"
+                android:gravity="center"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:src="@drawable/icon_complete"
+                android:layout_marginTop="@dimen/definite_dimen_6"
+                android:layout_marginBottom="@dimen/definite_dimen_6"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completed order"
+                android:fontFamily="@font/yeonsung_regular"
+                android:textColor="@color/green"
+                android:gravity="center"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/text_size_huge"
+                android:gravity="center"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:src="@drawable/icon_money"
+                android:layout_marginBottom="@dimen/definite_dimen_6"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Whole Time Earning"
+                android:fontFamily="@font/yeonsung_regular"
+                android:textColor="@color/green"
+                android:gravity="center"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="130 VND"
+                android:textColor="@color/green"
+                android:textSize="@dimen/text_size_large"
+                android:gravity="center"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/status_ln"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/btns1_ln"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/definite_dimen_18"
+                android:layout_marginEnd="@dimen/definite_dimen_18"
+                android:layout_marginTop="@dimen/definite_dimen_20"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnAddItem"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/definite_dimen_24"
+                    android:paddingBottom="@dimen/definite_dimen_24"
+                    android:paddingStart="@dimen/definite_dimen_50"
+                    android:paddingEnd="@dimen/definite_dimen_50"
+                    android:layout_marginEnd="@dimen/definite_dimen_12"
+                    android:background="@drawable/rounded_green_button"
+                    android:drawableTop="@drawable/icon_add"
+                    android:drawablePadding="@dimen/definite_dimen_2"
+                    android:text="Add Menu"
+                    android:fontFamily="@font/yeonsung_regular"
+                    android:textColor="@color/green"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnAllItem"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/definite_dimen_24"
+                    android:paddingBottom="@dimen/definite_dimen_24"
+                    android:paddingStart="@dimen/definite_dimen_50"
+                    android:paddingEnd="@dimen/definite_dimen_50"
+                    android:layout_marginStart="@dimen/definite_dimen_12"
+                    android:background="@drawable/rounded_green_button"
+                    android:drawableTop="@drawable/icon_eye"
+                    android:drawablePadding="@dimen/definite_dimen_2"
+                    android:text="All Item Menu"
+                    android:fontFamily="@font/yeonsung_regular"
+                    android:textColor="@color/green"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btns2_ln"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/definite_dimen_18"
+                android:layout_marginEnd="@dimen/definite_dimen_18"
+                android:layout_marginTop="@dimen/definite_dimen_20"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnProfile"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/definite_dimen_24"
+                    android:paddingBottom="@dimen/definite_dimen_24"
+                    android:paddingStart="@dimen/definite_dimen_50"
+                    android:paddingEnd="@dimen/definite_dimen_50"
+                    android:layout_marginEnd="@dimen/definite_dimen_12"
+                    android:background="@drawable/rounded_green_button"
+                    android:drawableTop="@drawable/icon_user"
+                    android:drawablePadding="@dimen/definite_dimen_2"
+                    android:text="Profile"
+                    android:fontFamily="@font/yeonsung_regular"
+                    android:textColor="@color/green"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCreateAdmin"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/definite_dimen_24"
+                    android:paddingBottom="@dimen/definite_dimen_24"
+                    android:layout_marginStart="@dimen/definite_dimen_12"
+                    android:background="@drawable/rounded_green_button"
+                    android:drawableTop="@drawable/icon_add_user"
+                    android:drawablePadding="@dimen/definite_dimen_2"
+                    android:text="Create New User"
+                    android:fontFamily="@font/yeonsung_regular"
+                    android:textColor="@color/green"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/definite_dimen_18"
+                android:layout_marginEnd="@dimen/definite_dimen_18"
+                android:layout_marginTop="@dimen/definite_dimen_20"
+                android:layout_marginBottom="@dimen/definite_dimen_18"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnOrderDispatch"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/definite_dimen_24"
+                    android:paddingBottom="@dimen/definite_dimen_24"
+
+                    android:layout_marginEnd="@dimen/definite_dimen_12"
+                    android:background="@drawable/rounded_green_button"
+                    android:drawableTop="@drawable/icon_purchase"
+                    android:drawablePadding="@dimen/definite_dimen_2"
+                    android:text="Order Dispatch"
+                    android:fontFamily="@font/yeonsung_regular"
+                    android:textColor="@color/yellow"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLogOut"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/definite_dimen_24"
+                    android:paddingBottom="@dimen/definite_dimen_24"
+                    android:paddingStart="@dimen/definite_dimen_50"
+                    android:paddingEnd="@dimen/definite_dimen_50"
+                    android:layout_marginStart="@dimen/definite_dimen_12"
+                    android:background="@drawable/rounded_green_button"
+                    android:drawableTop="@drawable/icon_logout"
+                    android:drawablePadding="@dimen/definite_dimen_2"
+                    android:text="Log Out"
+                    android:fontFamily="@font/yeonsung_regular"
+                    android:textColor="@color/red"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Food Ordering Admin App</string>
+    <string-array name="country_names">
+        <item>Vietnam</item>
+        <item>China</item>
+        <item>Japan</item>
+        <item>United States</item>
+        <item>United Kingdom</item>
+        <item>Canada</item>
+        <item>Australia</item>
+        <item>Germany</item>
+        <item>France</item>
+        <item>Brazil</item>
+        <item>South Korea</item>
+        <item>India</item>
+        <item>Russia</item>
+        <item>Italy</item>
+        <item>Spain</item>
+        <item>Mexico</item>
+        <item>South Africa</item>
+        <item>Argentina</item>
+        <item>Netherlands</item>
+        <item>New Zealand</item>
+        <item>Sweden</item>
+        <item>Switzerland</item>
+        <item>Norway</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+    <string name="tv_choose_your_location">Choose Your Location</string>
+    <string name="tv_choose_location">Choose Location</string>
+    <string name="tv_waves_of_food">Waves Of Food</string>
+    <string name="tv_deliver_favorite_food">Deliver Favorite Food</string>
+    <string name="tv_login_to_your_account">Login To Your Account</string>
+    <string name="hint_email_or_phone_number">Email or Phone Number</string>
+    <string name="hint_password">Password</string>
+    <string name="tv_or">Or</string>
+    <string name="tv_continue_with">Continue With</string>
+    <string name="tv_facebook">Facebook</string>
+    <string name="tv_google">Google</string>
+    <string name="tv_login">Login</string>
+    <string name="tv_don_t_have_account">Don’t Have Account?</string>
+    <string name="tv_explore_your_favorite_food">Explore Your Favorite Food</string>
+    <string name="tv_popular">Popular</string>
+    <string name="tv_view_menu">View Menu</string>
+    <string name="tv_home">Home</string>
+    <string name="tv_cart">Cart</string>
+    <string name="tv_search">Search</string>
+    <string name="tv_history">History</string>
+    <string name="tv_profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_food_details">Food Details</string>
+    <string name="tv_short_description">Short description</string>
+    <string name="tv_detail_food">Rau muống xào tỏi là một món ăn truyền thống trong nền ẩm thực Việt Nam. Món này chế biến từ rau muống tươi ngon, được xào nhanh chóng trong dầu ăn và tỏi thái lát, tạo ra hương vị độc đáo, ngon mắn và bổ dưỡng. Món rau muống xào tỏi thường được ưa thích bởi hương thơm của tỏi và sự tươi ngon của rau muống, thường được kết hợp với cơm trắng hoặc bánh mì là một bữa ăn ngon miệng và nhanh chóng.</string>
+    <string name="tv_ingredients">Ingredients</string>
+    <string name="tv_ingredient_detail">• Strowberry\n• Cream\n• wheat</string>
+    <string name="default_web_client_id">73970558205-l6a2eda1li09l2ojmhuucgc40rmlni02.apps.googleusercontent.com</string>
+
+
+</resources>

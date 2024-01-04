@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.AddItemActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/definite_dimen_30"
+                android:layout_height="@dimen/definite_dimen_30"
+                android:src="@drawable/icon_return"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="@dimen/definite_dimen_24"
+                android:layout_marginTop="@dimen/definite_dimen_24"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Item"
+                android:fontFamily="@font/yeonsung_regular"
+                android:textSize="@dimen/text_size_huge"
+                app:layout_constraintStart_toEndOf="@id/btnBack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/definite_dimen_24"
+                />
+
+            <LinearLayout
+                android:id="@+id/LlItemName"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_white_button"
+                android:layout_marginStart="@dimen/definite_dimen_20"
+                android:layout_marginEnd="@dimen/definite_dimen_20"
+                android:layout_marginTop="@dimen/definite_dimen_20"
+                android:weightSum="3"
+                android:padding="@dimen/definite_dimen_10"
+                app:layout_constraintTop_toBottomOf="@id/btnBack">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Food Name"
+                    android:fontFamily="@font/yeonsung_regular"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_marginEnd="@dimen/definite_dimen_30"
+                    android:layout_marginStart="@dimen/definite_dimen_10"
+                    android:layout_weight="1"
+                    />
+
+                <EditText
+                    android:id="@+id/edtFoodName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/yeonsung_regular"
+                    android:layout_weight="2"
+                    android:background="@drawable/profile_edit_text_shape"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LlItemPrice"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_white_button"
+                android:layout_marginStart="@dimen/definite_dimen_20"
+                android:layout_marginEnd="@dimen/definite_dimen_20"
+                android:layout_marginTop="@dimen/definite_dimen_20"
+                android:weightSum="3"
+                android:padding="@dimen/definite_dimen_10"
+                app:layout_constraintTop_toBottomOf="@id/LlItemName">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Food Price"
+                    android:fontFamily="@font/yeonsung_regular"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_marginEnd="@dimen/definite_dimen_30"
+                    android:layout_marginStart="@dimen/definite_dimen_10"
+                    android:layout_weight="1"
+                    />
+
+                <EditText
+                    android:id="@+id/edtFoodPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/yeonsung_regular"
+                    android:layout_weight="2"
+                    android:background="@drawable/profile_edit_text_shape"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LlItemImage"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_white_button"
+                android:layout_marginStart="@dimen/definite_dimen_20"
+                android:layout_marginEnd="@dimen/definite_dimen_20"
+                android:layout_marginTop="@dimen/definite_dimen_20"
+                android:weightSum="10"
+                android:padding="@dimen/definite_dimen_10"
+                app:layout_constraintTop_toBottomOf="@id/LlItemPrice">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Food Image"
+                    android:fontFamily="@font/yeonsung_regular"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_marginEnd="@dimen/definite_dimen_30"
+                    android:layout_marginStart="@dimen/definite_dimen_10"
+                    android:layout_weight="9.75"
+                    android:layout_gravity="center"
+                    />
+
+
+                <TextView
+                    android:id="@+id/btnAddImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/yeonsung_regular"
+                    android:background="@drawable/icon_add"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.25"
+
+                    />
+
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CvSelectedImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/LlItemImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardCornerRadius="@dimen/definite_dimen_16"
+                android:layout_marginTop="@dimen/definite_dimen_24"
+                >
+
+                <ImageView
+                    android:id="@+id/selectedImg"
+                    android:layout_width="@dimen/definite_dimen_100"
+                    android:layout_height="@dimen/definite_dimen_100"
+                    android:src="@drawable/icon_add_image"
+                    android:scaleType="fitCenter"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/edtShortDes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Short Description"
+                android:fontFamily="@font/yeonsung_regular"
+                app:layout_constraintTop_toBottomOf="@id/CvSelectedImg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/definite_dimen_24"
+                android:layout_marginEnd="@dimen/definite_dimen_24"
+                />
+
+            <EditText
+                android:id="@+id/tvDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Add description here"
+                android:textSize="@dimen/text_size_small"
+                android:fontFamily="@font/yeonsung_regular"
+                app:layout_constraintTop_toBottomOf="@id/edtShortDes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/definite_dimen_24"
+                android:layout_marginTop="@dimen/definite_dimen_10"
+                android:layout_marginEnd="@dimen/definite_dimen_20"
+                />
+
+            <TextView
+                android:id="@+id/edtIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingredients"
+                android:fontFamily="@font/yeonsung_regular"
+                app:layout_constraintTop_toBottomOf="@id/tvDetail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/definite_dimen_24"
+                android:layout_marginEnd="@dimen/definite_dimen_24"
+                android:layout_marginTop="@dimen/definite_dimen_12"
+                />
+
+            <EditText
+                android:id="@+id/tvIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Add ingredient here"
+                android:textSize="@dimen/text_size_small"
+                android:fontFamily="@font/yeonsung_regular"
+                app:layout_constraintTop_toBottomOf="@id/edtIngredients"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/definite_dimen_24"
+                android:layout_marginTop="@dimen/definite_dimen_10"
+                android:layout_marginEnd="@dimen/definite_dimen_20"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAddBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Item"
+                android:textStyle="bold"
+                android:fontFamily="@font/yeonsung_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvIngredients"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/rounded_green_button"
+                android:layout_marginBottom="@dimen/definite_dimen_12"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
