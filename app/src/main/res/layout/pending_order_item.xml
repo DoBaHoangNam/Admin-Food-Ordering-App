@@ -31,13 +31,15 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="@dimen/definite_dimen_0"
+        android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/definite_dimen_20"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/cardView"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintLeft_toRightOf="@id/cardView"
+        app:layout_constraintRight_toLeftOf="@id/btnAccptDis"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="@dimen/definite_dimen_12">
 
         <TextView
             android:id="@+id/tvNameOfCustomer2"
@@ -46,6 +48,18 @@
             android:fontFamily="@font/yeonsung_regular"
             android:text="Name Customer"
             android:textSize="@dimen/text_size_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cardView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNameOfFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yeonsung_regular"
+            android:text="Name Food"
+            android:textSize="@dimen/text_size_normal"
+            android:layout_marginTop="@dimen/definite_dimen_2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/cardView"
             app:layout_constraintTop_toTopOf="parent" />

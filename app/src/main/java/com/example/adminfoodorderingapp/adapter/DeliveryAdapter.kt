@@ -5,47 +5,48 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.adminfoodorderingapp.R
-import com.example.adminfoodorderingapp.model.Delivery
-import com.example.adminfoodorderingapp.model.Food
+import com.example.adminfoodorderingapp.databinding.DeliveryItemBinding
 
 
-class DeliveryAdapter(private var items: MutableList<Delivery>) :
-    RecyclerView.Adapter<DeliveryAdapter.ViewHolder>() {
-  
-    val itemQuantities = IntArray(items.size){1}
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val customerName: TextView = itemView.findViewById(R.id.tvNameOfCustomer)
-        val status: TextView = itemView.findViewById(R.id.tvStatus)
-        val imgStatus: CardView = itemView.findViewById(R.id.imgStatus)
+class DeliveryAdapter(
+    private var customername: MutableList<String>,
+    private val moneyStatus: MutableList<Boolean>
+) :
+    RecyclerView.Adapter<DeliveryAdapter.DeliveryViewHolder>() {
+
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DeliveryViewHolder {
+        val binding = DeliveryItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return DeliveryViewHolder(binding)
+    }
+
+    override fun getItemCount(): Int = customername.size
+
+    override fun onBindViewHolder(holder: DeliveryViewHolder, position: Int) {
+        holder.bind(position)
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.delivery_item, parent, false)
-        return ViewHolder(itemView)
-    }
-
-    override fun getItemCount(): Int {
-        return items.size
-    }
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val currentItem = items[position]
-        holder.customerName.text = currentItem.customerName
-        holder.status.text = currentItem.status
-        val colorMap = mapOf(
-            "Received" to Color.GREEN, "Not Received" to Color.RED, "Pending" to Color.GRAY
-        )
-        holder.status.setTextColor(colorMap[currentItem.status]?:Color.BLACK)
-        holder.imgStatus.backgroundTintList = ColorStateList.valueOf(colorMap[currentItem.status]?:Color.BLACK)
-
-
+    inner class DeliveryViewHolder(private val binding: DeliveryItemBinding) : RecyclerView.ViewHolder(binding.root){
+        fun bind(position: Int){
+            binding.apply {
+                tvNameOfCustomer.text = customername[position]
+                if(moneyStatus[position] == true){
+                    tvStatus.text = "Recieved"
+                }else{
+                    tvStatus.text = "Not Recieved"
+                }
+                val colorMap = mapOf(
+                    true to Color.GREEN, false to Color.RED
+                )
+                tvStatus.setTextColor(colorMap[moneyStatus[position]]?:Color.BLACK)
+                imgStatus.backgroundTintList = ColorStateList.valueOf(colorMap[moneyStatus[position]]?:Color.BLACK)
+            }
+        }
     }
 
 

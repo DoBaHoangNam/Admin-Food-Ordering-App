@@ -1,7 +1,8 @@
 package com.example.adminfoodorderingapp.model
 
 data class Order (
-    val customerName: String,
-    val quantity: String,
-    val image: Int
+    var customerName: String? = null,
+    var foodName: String? = null,
+    var quantity: Int = 1,
+    var foodImage: String? = null,
 )

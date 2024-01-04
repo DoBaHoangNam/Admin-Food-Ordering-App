@@ -70,6 +70,7 @@
 
                 />
             <TextView
+                android:id="@+id/numberPending"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="30"
@@ -102,6 +103,7 @@
 
                 />
             <TextView
+                android:id="@+id/tvCompletedOrder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="10"
@@ -132,11 +134,12 @@
 
                 />
             <TextView
+                android:id="@+id/tvEarning"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="130 VND"
+                android:text="0"
                 android:textColor="@color/green"
-                android:textSize="@dimen/text_size_large"
+                android:textSize="@dimen/text_size_normal"
                 android:gravity="center"
                 android:textStyle="bold"/>
         </LinearLayout>
@@ -230,22 +233,26 @@
                     android:textAllCaps="false"
                     android:layout_weight="1"
                     />
+
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnCreateAdmin"
+                    android:id="@+id/btnOrderDispatch"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
                     android:paddingTop="@dimen/definite_dimen_24"
                     android:paddingBottom="@dimen/definite_dimen_24"
+                    android:paddingStart="@dimen/definite_dimen_50"
+                    android:paddingEnd="@dimen/definite_dimen_50"
                     android:layout_marginStart="@dimen/definite_dimen_12"
                     android:background="@drawable/rounded_green_button"
-                    android:drawableTop="@drawable/icon_add_user"
+                    android:drawableTop="@drawable/icon_purchase"
                     android:drawablePadding="@dimen/definite_dimen_2"
-                    android:text="Create New User"
+                    android:text="Order Dispatch"
                     android:fontFamily="@font/yeonsung_regular"
-                    android:textColor="@color/green"
+                    android:textColor="@color/yellow"
                     android:textAllCaps="false"
                     android:layout_weight="1"
                     />
+
             </LinearLayout>
 
             <LinearLayout
@@ -257,32 +264,13 @@
                 android:layout_marginBottom="@dimen/definite_dimen_18"
                 android:weightSum="2">
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnOrderDispatch"
-                    android:layout_width="0px"
-                    android:layout_height="match_parent"
-                    android:paddingTop="@dimen/definite_dimen_24"
-                    android:paddingBottom="@dimen/definite_dimen_24"
 
-                    android:layout_marginEnd="@dimen/definite_dimen_12"
-                    android:background="@drawable/rounded_green_button"
-                    android:drawableTop="@drawable/icon_purchase"
-                    android:drawablePadding="@dimen/definite_dimen_2"
-                    android:text="Order Dispatch"
-                    android:fontFamily="@font/yeonsung_regular"
-                    android:textColor="@color/yellow"
-                    android:textAllCaps="false"
-                    android:layout_weight="1"
-                    />
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnLogOut"
-                    android:layout_width="0px"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingTop="@dimen/definite_dimen_24"
                     android:paddingBottom="@dimen/definite_dimen_24"
-                    android:paddingStart="@dimen/definite_dimen_50"
-                    android:paddingEnd="@dimen/definite_dimen_50"
-                    android:layout_marginStart="@dimen/definite_dimen_12"
                     android:background="@drawable/rounded_green_button"
                     android:drawableTop="@drawable/icon_logout"
                     android:drawablePadding="@dimen/definite_dimen_2"
